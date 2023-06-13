@@ -1,33 +1,24 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Row, Col } from 'react-bootstrap';
 import './App.css';
 import UsersForm from './Components/UsersForm';
 import Users from './Components/Users';
 
 const App = () => {
-
   return (
     <>
-      <Container>
+      <Container className="top">
         <Row>
-          <Col
-            xs={2}
-          >
+          <Col sm={4} md={3}>
             <UsersForm />
           </Col>
-          <Col
-            xs={10}
-          >
-            <Users/>
+          <Col>
+            <Users />
           </Col>
         </Row>
       </Container>
     </>
-  )
+  );
+};
 
-}
-
-export default App
-
+export default App;
